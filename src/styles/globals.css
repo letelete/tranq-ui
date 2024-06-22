@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '~styles/context-aware.css';
+
+@layer base {
+  html {
+    @apply min-h-screen;
+  }
+
+  body {
+    @apply min-h-screen;
+  }
+
+  ::selection {
+    @apply bg-ctx-accent-secondary text-ctx-accent-secondary-fg-primary;
+  }
+}
+
+@layer utilities {
+  .layout-padding {
+    @apply px-4 sm:px-[5vw] 2xl:px-0;
+  }
+
+  .layout-width-limiter {
+    @apply mx-auto my-0 max-w-screen-xl;
+  }
+
+  .lock-scroll {
+    @apply fixed w-full overflow-y-scroll;
+  }
+}
